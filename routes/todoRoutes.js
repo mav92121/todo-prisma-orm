@@ -29,7 +29,7 @@ router.put("/todo/:id", async (req, res) => {
   res.json(todo);
 });
 
-router.delete("/todo:id", async (req, res) => {
+router.delete("/todo/:id", async (req, res) => {
   // delete a todo
   const { id } = req.params;
   await prisma.todo.delete({
